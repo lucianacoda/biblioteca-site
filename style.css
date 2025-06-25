@@ -1,0 +1,132 @@
+/* Paleta de Cores */
+:root {
+    --cor-fundo: #e9decf;
+    --cor-marrom: #3a2c1a;
+    --cor-laranja: #d1792a;
+    --cor-verde: #427b7b;
+    --cor-amarelo: #c79e4d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-marrom);
+}
+
+header {
+    background-color: var(--cor-fundo);
+    padding: 10px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    background-color: var(--cor-marrom);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.menu .logo {
+    color: var(--cor-fundo);
+    font-weight: bold;
+    display: none;
+}
+
+.menu .menu-toggle {
+    color: var(--cor-fundo);
+    font-size: 26px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-links {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-links a {
+    color: var(--cor-fundo);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu-links a:hover {
+    color: var(--cor-laranja);
+}
+
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+main h1 {
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: var(--cor-marrom);
+    color: var(--cor-fundo);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.botao {
+    background-color: var(--cor-verde);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.botao:hover {
+    background-color: var(--cor-laranja);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .menu .menu-toggle {
+        display: block;
+    }
+
+    .menu .logo {
+        display: block;
+    }
+
+    .menu-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        background-color: var(--cor-marrom);
+        padding: 10px 0;
+    }
+
+    .menu-links a {
+        text-align: center;
+        padding: 8px 0;
+    }
+
+    .menu-links.active {
+        display: flex;
+    }
+}
