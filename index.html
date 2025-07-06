@@ -8,34 +8,71 @@
 </head>
 <body>
   <header class="header">
-    <img src="https://977099015297-genai-file-ingestor-v2-bucket.s3.amazonaws.com/01JZ8Z43JDC40A47JHYYHW2SG7/CONTEXT/01JZ8ZHWE6PV3SZZ7KEJ5QX3DQ/banner.png" alt="Banner Biblioteca Escolar" class="banner-img">
+    <img src="image/banner.png" alt="Banner Biblioteca Escolar" class="banner-img">
     <h1>Biblioteca Escolar</h1>
   </header>
-  <main>
     <section>
-      <h2>Cadastrar Aluno</h2>
-      <form id="alunoForm">
-        <input type="text" id="alunoNome" placeholder="Nome do aluno" required>
-        <button type="submit">Cadastrar</button>
-      </form>
+        <h2>Cadastrar Aluno</h2>
+        <form id="form-aluno">
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="text" name="matricula" placeholder="Matrícula" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="text" name="telefone" placeholder="Telefone" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <div id="aluno-msg"></div>
     </section>
+
     <section>
-      <h2>Cadastrar Livro</h2>
-      <form id="livroForm">
-        <input type="text" id="livroTitulo" placeholder="Título do livro" required>
-        <input type="text" id="livroAutor" placeholder="Autor" required>
-        <button type="submit">Cadastrar</button>
-      </form>
+        <h2>Alunos Matriculados</h2>
+        <button onclick="listarAlunos()">Atualizar Lista</button>
+        <ul id="lista-alunos"></ul>
     </section>
+
     <section>
-      <h2>Livros Disponíveis</h2>
-      <div id="livros"></div>
+        <h2>Cadastrar Livro</h2>
+        <form id="form-livro">
+            <input type="text" name="titulo" placeholder="Título" required>
+            <input type="text" name="autor" placeholder="Autor" required>
+            <input type="text" name="editora" placeholder="Editora" required>
+            <input type="number" name="edicao" placeholder="Edição" required>
+            <input type="number" name="ano_publicacao" placeholder="Ano" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <div id="livro-msg"></div>
     </section>
+
     <section>
-      <h2>Empréstimos</h2>
-      <div id="emprestimos"></div>
+        <h2>Livros Cadastrados</h2>
+        <button onclick="listarLivros()">Atualizar Lista</button>
+        <ul id="lista-livros"></ul>
     </section>
-  </main>
-  <script src="script.js"></script>
+
+    <section>
+        <h2>Empréstimo de Livro</h2>
+        <form id="form-emprestimo">
+            <input type="number" name="aluno_id" placeholder="ID do Aluno" required>
+            <input type="number" name="livro_id" placeholder="ID do Livro" required>
+            <button type="submit">Emprestar</button>
+        </form>
+        <div id="emprestimo-msg"></div>
+    </section>
+
+    <section>
+        <h2>Devolução de Livro</h2>
+        <form id="form-devolucao">
+            <input type="number" name="emprestimo_id" placeholder="ID do Empréstimo" required>
+            <button type="submit">Devolver</button>
+        </form>
+        <div id="devolucao-msg"></div>
+    </section>
+
+    <section>
+        <h2>Empréstimos</h2>
+        <button onclick="listarEmprestimos()">Atualizar Lista</button>
+        <ul id="lista-emprestimos"></ul>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
