@@ -1,132 +1,85 @@
-/* Paleta de Cores */
-:root {
-    --cor-fundo: #e9decf;
-    --cor-marrom: #3a2c1a;
-    --cor-laranja: #d1792a;
-    --cor-verde: #427b7b;
-    --cor-amarelo: #c79e4d;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: var(--cor-fundo);
-    color: var(--cor-marrom);
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
-
-header {
-    background-color: var(--cor-fundo);
-    padding: 10px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    text-align: center;
+.header {
+  text-align: center;
+  background: #fff;
+  padding-bottom: 1rem;
+  box-shadow: 0 2px 8px #eee;
 }
-
-header img {
-    max-width: 100%;
-    height: auto;
+.banner-img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #ccc;
 }
-
-nav {
-    background-color: var(--cor-marrom);
+h1 {
+  margin: 0.5em 0 0.2em 0;
+  font-size: 2rem;
+  color: #333;
 }
-
-.menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-.menu .logo {
-    color: var(--cor-fundo);
-    font-weight: bold;
-    display: none;
-}
-
-.menu .menu-toggle {
-    color: var(--cor-fundo);
-    font-size: 26px;
-    cursor: pointer;
-    display: none;
-}
-
-.menu-links {
-    display: flex;
-    gap: 20px;
-}
-
-.menu-links a {
-    color: var(--cor-fundo);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.menu-links a:hover {
-    color: var(--cor-laranja);
-}
-
 main {
-    padding: 40px 20px;
-    text-align: center;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
-
-main h1 {
-    margin-bottom: 15px;
+section {
+  margin: 20px auto;
+  max-width: 600px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
 }
-
-footer {
-    background-color: var(--cor-marrom);
-    color: var(--cor-fundo);
-    padding: 10px 0;
-    text-align: center;
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
 }
-
-.botao {
-    background-color: var(--cor-verde);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: background-color 0.3s;
+input, button {
+  padding: 0.7em;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
-
-.botao:hover {
-    background-color: var(--cor-laranja);
+button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
 }
-
-/* RESPONSIVO */
-@media (max-width: 768px) {
-    .menu .menu-toggle {
-        display: block;
-    }
-
-    .menu .logo {
-        display: block;
-    }
-
-    .menu-links {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        background-color: var(--cor-marrom);
-        padding: 10px 0;
-    }
-
-    .menu-links a {
-        text-align: center;
-        padding: 8px 0;
-    }
-
-    .menu-links.active {
-        display: flex;
-    }
+button:hover {
+  background: #0056b3;
+}
+#livros, #emprestimos {
+  margin-top: 10px;
+}
+.card {
+  background: #e3e3e3;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+@media (max-width: 600px) {
+  .banner-img {
+    max-width: 100%;
+    border-radius: 0;
+  }
+  main {
+    padding: 0 0.3rem;
+  }
+  section {
+    padding: 10px;
+  }
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }

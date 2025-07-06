@@ -1,43 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca Escolar</title>
-
-    <!-- Importa o CSS -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Biblioteca Escolar</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
-    <header>
-        <img src="image/banner.png" alt="Banner Biblioteca Escolar">
-    </header>
-
-    <nav>
-        <div class="menu">
-            <div class="logo">Menu</div>
-            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-            <div class="menu-links" id="menuLinks">
-                <a href="#">Início</a>
-                <a href="#">Catálogo</a>
-                <a href="#">Empréstimos</a>
-                <a href="#">Sobre</a>
-            </div>
-        </div>
-    </nav>
-
-    <main>
-        <h1>Bem-vindo à Biblioteca Escolar!</h1>
-        <p>Explore nosso acervo e descubra um mundo de conhecimento!</p>
-        <button class="botao" onclick="saudacao()">Clique aqui</button>
-    </main>
-
-    <footer>
-        &copy; 2025 Biblioteca Escolar. Todos os direitos reservados.
-    </footer>
-
-    <!-- Importa o JavaScript -->
-    <script src="script.js"></script>
+  <header class="header">
+    <img src="https://977099015297-genai-file-ingestor-v2-bucket.s3.amazonaws.com/01JZ8Z43JDC40A47JHYYHW2SG7/CONTEXT/01JZ8ZHWE6PV3SZZ7KEJ5QX3DQ/banner.png" alt="Banner Biblioteca Escolar" class="banner-img">
+    <h1>Biblioteca Escolar</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Cadastrar Aluno</h2>
+      <form id="alunoForm">
+        <input type="text" id="alunoNome" placeholder="Nome do aluno" required>
+        <button type="submit">Cadastrar</button>
+      </form>
+    </section>
+    <section>
+      <h2>Cadastrar Livro</h2>
+      <form id="livroForm">
+        <input type="text" id="livroTitulo" placeholder="Título do livro" required>
+        <input type="text" id="livroAutor" placeholder="Autor" required>
+        <button type="submit">Cadastrar</button>
+      </form>
+    </section>
+    <section>
+      <h2>Livros Disponíveis</h2>
+      <div id="livros"></div>
+    </section>
+    <section>
+      <h2>Empréstimos</h2>
+      <div id="emprestimos"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
