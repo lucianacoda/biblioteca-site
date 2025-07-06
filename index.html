@@ -1,43 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca Escolar</title>
-
-    <!-- Importa o CSS -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Biblioteca Escolar</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+  <header class="header">
+    <img src="image/banner.png" alt="Banner Biblioteca Escolar" class="banner-img">
+    <h1>Biblioteca Escolar</h1>
+  </header>
+    <section>
+        <h2>Cadastrar Aluno</h2>
+        <form id="form-aluno">
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="text" name="matricula" placeholder="Matrícula" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="text" name="telefone" placeholder="Telefone" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <div id="aluno-msg"></div>
+    </section>
 
-    <header>
-        <img src="image/banner.png" alt="Banner Biblioteca Escolar">
-    </header>
+    <section>
+        <h2>Alunos Matriculados</h2>
+        <button onclick="listarAlunos()">Atualizar Lista</button>
+        <ul id="lista-alunos"></ul>
+    </section>
 
-    <nav>
-        <div class="menu">
-            <div class="logo">Menu</div>
-            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-            <div class="menu-links" id="menuLinks">
-                <a href="#">Início</a>
-                <a href="#">Catálogo</a>
-                <a href="#">Empréstimos</a>
-                <a href="#">Sobre</a>
-            </div>
-        </div>
-    </nav>
+    <section>
+        <h2>Cadastrar Livro</h2>
+        <form id="form-livro">
+            <input type="text" name="titulo" placeholder="Título" required>
+            <input type="text" name="autor" placeholder="Autor" required>
+            <input type="text" name="editora" placeholder="Editora" required>
+            <input type="number" name="edicao" placeholder="Edição" required>
+            <input type="number" name="ano_publicacao" placeholder="Ano" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <div id="livro-msg"></div>
+    </section>
 
-    <main>
-        <h1>Bem-vindo à Biblioteca Escolar</h1>
-        <p>Explore nosso acervo e descubra um mundo de conhecimento!</p>
-        <button class="botao" onclick="saudacao()">Clique aqui</button>
-    </main>
+    <section>
+        <h2>Livros Cadastrados</h2>
+        <button onclick="listarLivros()">Atualizar Lista</button>
+        <ul id="lista-livros"></ul>
+    </section>
 
-    <footer>
-        &copy; 2025 Biblioteca Escolar. Todos os direitos reservados.
-    </footer>
+    <section>
+        <h2>Empréstimo de Livro</h2>
+        <form id="form-emprestimo">
+            <input type="number" name="aluno_id" placeholder="ID do Aluno" required>
+            <input type="number" name="livro_id" placeholder="ID do Livro" required>
+            <button type="submit">Emprestar</button>
+        </form>
+        <div id="emprestimo-msg"></div>
+    </section>
 
-    <!-- Importa o JavaScript -->
+    <section>
+        <h2>Devolução de Livro</h2>
+        <form id="form-devolucao">
+            <input type="number" name="emprestimo_id" placeholder="ID do Empréstimo" required>
+            <button type="submit">Devolver</button>
+        </form>
+        <div id="devolucao-msg"></div>
+    </section>
+
+    <section>
+        <h2>Empréstimos</h2>
+        <button onclick="listarEmprestimos()">Atualizar Lista</button>
+        <ul id="lista-emprestimos"></ul>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>
